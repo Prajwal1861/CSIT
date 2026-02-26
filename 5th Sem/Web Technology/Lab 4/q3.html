@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+
+<h2>Fibonacci Series</h2>
+<div id="fib"></div>
+
+<script>
+    let n = 10;   
+    let a = 0, b = 1;
+    let output = a + "<br>" + b + "<br>";
+
+    for (let i = 3; i <= n; i++) {
+        let c = a + b;
+        output += c + "<br>";
+        a = b;
+        b = c;
+    }
+
+    document.getElementById("fib").innerHTML = output;
+</script>
+
+</body>
+</html>

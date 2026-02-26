@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial using Recursive Function</title>
+</head>
+<body>
+
+<h2>Factorial using Recursive Function</h2>
+
+<script>
+    function factorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    let num = parseInt(prompt("Enter a number:"));
+
+    if (num >= 0) {
+        document.write("Factorial of " + num + " is: " + factorial(num));
+    } else {
+        document.write("Please enter a non-negative number.");
+    }
+</script>
+
+</body>
+</html>

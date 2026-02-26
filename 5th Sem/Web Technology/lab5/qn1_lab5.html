@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series using Arrow Function</title>
+</head>
+<body>
+
+<h2>Fibonacci Series using Arrow Function</h2>
+
+<script>
+    const fibonacci = (n) => {
+        let a = 0, b = 1, c;
+        let result = "";
+
+        for (let i = 1; i <= n; i++) {
+            result += a + " ";
+            c = a + b;
+            a = b;
+            b = c;
+        }
+
+        return result;
+    };
+
+    let terms = parseInt(prompt("Enter the number of terms:"));
+
+    if (terms > 0) {
+        document.write("<b>Fibonacci Series:</b><br>");
+        document.write(fibonacci(terms));
+    } else {
+        document.write("Please enter a valid positive number.");
+    }
+</script>
+
+</body>
+</html>

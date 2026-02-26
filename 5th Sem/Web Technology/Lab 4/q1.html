@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+<body>
+
+<h2>Student Information</h2>
+<div id="output"></div>
+
+<script>
+    let studentName = prompt("Enter Student Name:");
+    let rollNumber = prompt("Enter Roll Number:");
+    let department = prompt("Enter Department:");
+    let projectTitle = prompt("Enter Project Title:");
+
+    let student = {
+        name: studentName,
+        roll: rollNumber,
+        dept: department,
+        project: projectTitle
+    };
+
+    document.getElementById("output").innerHTML = `
+        <p><b>Student Name:</b> ${student.name}</p>
+        <p><b>Roll Number:</b> ${student.roll}</p>
+        <p><b>Department:</b> ${student.dept}</p>
+        <p><b>Project Title:</b> ${student.project}</p>
+    `;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Array</title>
+</head>
+<body>
+
+<h2>Student Details</h2>
+<div id="output"></div>
+
+<script>
+    let students = [];
+
+    function addStudent() {
+        let name = prompt("Enter Student Name:");
+        let roll = prompt("Enter Roll Number:");
+        let dept = prompt("Enter Department:");
+        let project = prompt("Enter Project Title:");
+
+        let student = {
+            name: name,
+            roll: roll,
+            department: dept,
+            project: project
+        };
+
+        students.push(student);
+    }
+
+    let more = true;
+    while (more) {
+        addStudent();
+        more = confirm("Do you want to enter another student?");
+    }
+
+    let output = "";
+    for (let i = 0; i < students.length; i++) {
+        output += `
+            <h3>Student ${i + 1}</h3>
+            Name: ${students[i].name}<br>
+            Roll: ${students[i].roll}<br>
+            Department: ${students[i].department}<br>
+            Project: ${students[i].project}<br><br>
+        `;
+    }
+
+    document.getElementById("output").innerHTML = output;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table and Pattern</title>
+</head>
+<body>
+
+<h2>Table of 12</h2>
+<div id="table"></div>
+
+<h2>Star Pattern</h2>
+<div id="pattern"></div>
+
+<script>
+    let tableOutput = "";
+    for (let i = 1; i <= 10; i++) {
+        tableOutput += `12 x ${i} = ${12 * i}<br>`;
+    }
+    document.getElementById("table").innerHTML = tableOutput;
+
+    let patternOutput = "";
+    for (let i = 1; i <= 5; i += 2) {
+        patternOutput += "*".repeat(i) + "<br>";
+    }
+    document.getElementById("pattern").innerHTML = patternOutput;
+</script>
+
+</body>
+</html>
